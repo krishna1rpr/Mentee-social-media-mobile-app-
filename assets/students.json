@@ -1,0 +1,34 @@
+{
+    "students" :[
+        {
+        "name": "Ram",
+        "isMentor": "true",
+        "status": "0",
+        "stacks": ["web", "mobile"]
+        },
+        {
+            "name": "Shyam",
+            "isMentor": "false",
+            "status": "0",
+            "stacks": ["frontend", "backend"]
+        },
+        {
+            "name": "Babu Rao",
+            "isMentor": "false",
+            "status": "0",
+            "stacks": ["web", "mobile"]
+        },
+        {
+            "name": "Khadhak Singh",
+            "isMentor": "true",
+            "status": "0",
+            "stacks": ["backend", "mobile"]
+        },
+        {
+            "name": "Raman",
+            "isMentor": "false",
+            "status": "0",
+            "stacks": ["web", "mobile"]
+        }
+    ]
+}
