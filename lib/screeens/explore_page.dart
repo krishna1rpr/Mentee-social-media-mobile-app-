@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:minor_p/widgets/bottom_navigator.dart';
+import 'package:minor_p/widgets/explore_section.dart';
 
 class ExplorePage extends StatefulWidget {
   const ExplorePage({super.key});
@@ -13,11 +14,11 @@ class _ExplorePageState extends State<ExplorePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: const Center(
-          child: Text("Explore Page"),
-        ),
+        child: ExploreList1(),
       ),
-      bottomNavigationBar: const BottomNavigation(current: 1),
+      bottomNavigationBar: const BottomNavigator(
+        current: 1,
+      ),
     );
   }
 }

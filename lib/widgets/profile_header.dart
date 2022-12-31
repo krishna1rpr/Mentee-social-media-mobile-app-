@@ -18,14 +18,14 @@ class ProfileHeaderWidget extends StatelessWidget {
           height: 10.0,
         ),
         Text(
-          'Person Name',
+          title,
           style: AppTheme.profileHeaderStyle(context),
         ),
         SizedBox(
           height: 10.0,
         ),
         Text(
-          'Designation( (year + Branch) / Alumini + job-title / Prof. )',
+          desc,
           style: Theme.of(context)
               .textTheme
               .bodyMedium

@@ -15,8 +15,8 @@ import 'package:minor_p/utils/theme.dart';
 import 'package:minor_p/widgets/login_form_template.dart';
 // import 'package:lottie/lottie.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: const BottomNavigation(
+      bottomNavigationBar: const BottomNavigator(
         current: 0,
       ),
     );

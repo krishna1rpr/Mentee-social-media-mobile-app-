@@ -3,19 +3,20 @@ import '../screeens/event_page.dart';
 import '../screeens/explore_page.dart';
 import '../screeens/home_page.dart';
 import '../screeens/job_page.dart';
+import '../screeens/mentor_page.dart';
 import '../screeens/profile/profile_screen.dart';
 import '../utils/theme.dart';
 
-class BottomNavigation extends StatefulWidget {
+class BottomNavigator extends StatefulWidget {
   final int current;
 
-  const BottomNavigation({Key? key, required this.current}) : super(key: key);
+  const BottomNavigator({Key? key, required this.current}) : super(key: key);
 
   @override
-  State<BottomNavigation> createState() => _BottomNavigationState();
+  State<BottomNavigator> createState() => _BottomNavigatorState();
 }
 
-class _BottomNavigationState extends State<BottomNavigation> {
+class _BottomNavigatorState extends State<BottomNavigator> {
   late int _selectedIndex = widget.current;
 
   @override
@@ -42,6 +43,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
         BottomNavigationBarItem(
           icon: Icon(Icons.post_add),
           label: "Jobs",
+          backgroundColor: AppTheme.primary,
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person_add_rounded),
+          label: "Mentors",
           backgroundColor: AppTheme.primary,
         ),
         BottomNavigationBarItem(
@@ -80,6 +86,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const JobPage()),
+      );
+    } else if (_selectedIndex == 4) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const MentorPage()),
       );
     } else {
       Navigator.push(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:minor_p/screeens/register.dart';
 //import 'package:minor_p/screeens/home.dart';
 // import 'package:minor_p/screeens/registration.dart';
 //import 'screeens/login.dart';
@@ -28,9 +29,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
 
       theme: ThemeData(
-          primaryColor: AppTheme.primary,
-          backgroundColor: AppTheme.primary,
-          fontFamily: 'Gilroy'),
+        primaryColor: AppTheme.primary,
+        backgroundColor: AppTheme.primary,
+        fontFamily: 'Gilroy',
+      ),
       // theme: ThemeData(
       //   // This is the theme of your application.
       //   //
@@ -45,6 +47,8 @@ class MyApp extends StatelessWidget {
       // ),
       // home: const LoginScreen(),
       home: const HomePage(),
+      // home: RegistrationPage(),
+      // home: const LoginPage(),
       // home: const ProfilePage(),
     );
   }

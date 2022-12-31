@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:minor_p/utils/theme.dart';
 import 'package:minor_p/widgets/bottom_navigator.dart';
+import 'package:minor_p/widgets/events_list.dart';
 
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 
-class EventPage extends StatefulWidget {
-  const EventPage({super.key});
+// class EventPage extends StatefulWidget {
+//   const EventPage({super.key});
 
-  @override
-  State<EventPage> createState() => _EventPageState();
-}
+//   @override
+//   State<EventPage> createState() => _EventPageState();
+// }
 
-class _EventPageState extends State<EventPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Container(
-          child: Text("Events Page"),
-        ),
-      ),
-    );
-  }
-}
+// class _EventPageState extends State<EventPage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(),
+//       body: Center(
+//         child: Container(
+//           child: Text("Events Page"),
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 class EventPage2 extends StatefulWidget {
   const EventPage2({super.key});
@@ -37,53 +38,42 @@ class _EventPage2State extends State<EventPage2> {
     "In-Campus",
     "Off-Campus",
     "Placement",
-    "Placement",
-    "Placement",
-    "Placement",
   ];
 
   final List<Widget> images = [
-    ClipRRect(
-      borderRadius: BorderRadius.circular(20.0),
-      child: Image.network(
-        "https://picsum.photos/200/300",
-        fit: BoxFit.cover,
+    InkWell(
+      // onTap: () => Navigator.pop(context),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20.0),
+        child: Container(color: Colors.lightBlue),
+        // child: Image.network(
+        //   "https://picsum.photos/200/300",
+        //   fit: BoxFit.cover,
+        // ),
       ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(20.0),
-      child: Image.network(
-        "https://picsum.photos/200/300",
-        fit: BoxFit.cover,
-      ),
+      //child: Container(color: AppTheme.iconColors[2]),
+      child: Container(color: Colors.lightBlue),
     ),
+    // ClipRRect(
+    //   borderRadius: BorderRadius.circular(20.0),
+    //   child: Image.network(
+    //     "https://picsum.photos/200/300",
+    //     fit: BoxFit.cover,
+    //   ),
+    // ),
     ClipRRect(
       borderRadius: BorderRadius.circular(20.0),
-      child: Image.network(
-        "https://picsum.photos/200/300",
-        fit: BoxFit.cover,
+      child: Container(
+        color: Colors.lightBlue,
+        // child: Text("Testing 123"),
       ),
-    ),
-    ClipRRect(
-      borderRadius: BorderRadius.circular(20.0),
-      child: Image.network(
-        "https://picsum.photos/200/300",
-        fit: BoxFit.cover,
-      ),
-    ),
-    ClipRRect(
-      borderRadius: BorderRadius.circular(20.0),
-      child: Image.network(
-        "https://picsum.photos/200/300",
-        fit: BoxFit.cover,
-      ),
-    ),
-    ClipRRect(
-      borderRadius: BorderRadius.circular(20.0),
-      child: Image.network(
-        "https://picsum.photos/200/300",
-        fit: BoxFit.cover,
-      ),
+      // child: Image.network(
+      //   "https://picsum.photos/200/300",
+      //   fit: BoxFit.cover,
+      // ),
     ),
   ];
 
@@ -96,9 +86,10 @@ class _EventPage2State extends State<EventPage2> {
           Expanded(
             child: Container(
               child: VerticalCardPager(
+                initialPage: 1,
                 textStyle: const TextStyle(
                     fontFamily: "Bevan",
-                    color: Colors.black54,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold),
                 titles: titles,
                 images: images,
@@ -111,7 +102,7 @@ class _EventPage2State extends State<EventPage2> {
           ),
         ],
       ),
-      bottomNavigationBar: const BottomNavigation(
+      bottomNavigationBar: const BottomNavigator(
         current: 2,
       ),
     );

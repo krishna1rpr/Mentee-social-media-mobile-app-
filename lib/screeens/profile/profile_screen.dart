@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:minor_p/widgets/bottom_navigator.dart';
 import 'package:minor_p/widgets/profile_card.dart';
 //import 'package:minor_p/widgets/profile_add.dart';
+import './../../data/student.dart';
 import 'package:minor_p/widgets/profile_header.dart';
 import 'package:minor_p/widgets/profile_image_widget.dart';
 import 'package:minor_p/utils/theme.dart';
@@ -40,9 +41,9 @@ class ProfileScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             // Header Widget
-            const ProfileHeaderWidget(
-              title: "Test Title",
-              desc: 'Test Description',
+            ProfileHeaderWidget(
+              title: students[0][0],
+              desc: students[0][1],
             ),
             const SizedBox(
               height: 35.0,
@@ -57,44 +58,44 @@ class ProfileScreen extends StatelessWidget {
                 children: <Widget>[
                   ProfileCardWidget(
                     title: 'Projects',
-                    desc: 'No. of projects',
+                    desc: students[0][2],
                     icon: Icons.work_history_rounded,
                     iconColor: AppTheme.iconColors[0],
                   ),
                   ProfileCardWidget(
                     title: 'DSA',
-                    desc: 'No. of question',
+                    desc: students[0][3],
                     icon: Icons.event_note,
                     iconColor: AppTheme.iconColors[1],
                   ),
                   ProfileCardWidget(
                     title: 'Interships',
-                    desc: 'No. of Internships',
+                    desc: students[0][4],
                     icon: Icons.calendar_today,
                     iconColor: AppTheme.iconColors[2],
                   ),
                   ProfileCardWidget(
                     title: 'Acheviments',
-                    desc: '3 cards',
+                    desc: students[0][5],
                     icon: Icons.local_atm,
                     iconColor: AppTheme.iconColors[3],
                   ),
                   ProfileCardWidget(
                     title: '',
-                    desc: '428 photos',
+                    desc: 'Add photos',
                     icon: Icons.camera,
                     iconColor: AppTheme.iconColors[4],
                   ),
 
                   // Add New To do Card
-                  // ProfileAddCardWidget(),
+                  //ProfileAddCardWidget(),
                 ],
               ),
             ),
           ],
         ),
       ),
-      bottomNavigationBar: const BottomNavigation(current: 4),
+      bottomNavigationBar: const BottomNavigator(current: 4),
     );
   }
 }
