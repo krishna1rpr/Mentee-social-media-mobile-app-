@@ -1,4 +1,4 @@
-# minor_p
+# Mentee
 
 A new Flutter project.
 
